@@ -1,7 +1,7 @@
 <template>
   <v-row>
       <v-col lg="5" md="5" cols="12">
-          <v-img :src="require('../assets/about.svg')"/>
+          <v-img :src="require('../assets/about.svg')" alt="Illustration de la  section a propos de nous"/>
       </v-col>
       <v-col lg="7" md="7" cols="12">
           <v-card flat>

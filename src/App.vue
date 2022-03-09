@@ -16,10 +16,8 @@
                 </template>
 
             </template>
+            <call-to-action text="Commander" />
 
-            <v-btn rounded small elevation="0" color="info lighten-1" class="my-3">
-                Commander
-            </v-btn>
         </v-app-bar>
 
         <v-navigation-drawer v-model="drawer" app>
@@ -41,16 +39,18 @@
                     <v-divider v-if="link.divider" class="pb-1" :key="'divider' + i"></v-divider>
 
                     <v-list-item color="info darken-2" v-else :key="link.name" :href="link.route" link>
-                        <v-list-item-content>
+                        <v-list-item-content class="text-center">
                             <v-list-item-title>{{ link.name }}</v-list-item-title>
                         </v-list-item-content>
                     </v-list-item>
 
                 </template>
+                <v-list-item>
+                    <v-list-item-content class="text-center">
+                        <call-to-action />
+                    </v-list-item-content>
+                </v-list-item>
 
-                <v-btn rounded elevation="0" color="info lighten-1" class="my-3">
-                    Commander mon site
-                </v-btn>
             </v-list>
 
         </v-navigation-drawer>
@@ -96,6 +96,7 @@
                     <contact />
                 </v-col>
             </v-row>
+            <FAB />
         </v-container>
     </v-main>
     <template>
@@ -118,6 +119,9 @@ import Services from './components/Services.vue';
 import Team from './components/Team.vue';
 import Titre from './components/Titre.vue';
 import Vue from 'vue'
+import CallToAction from './components/CallToAction.vue';
+import FAB from './components/FAB.vue';
+
 Vue.mixin({
     computed: {
         isMobile() {
@@ -136,6 +140,8 @@ export default {
         Team,
         Contact,
         Titre,
+        CallToAction,
+        FAB,
 
     },
     data: () => ({
@@ -192,3 +198,10 @@ export default {
     }),
 };
 </script>
+
+<style>
+* {
+    scroll-behavior: smooth;
+    scroll-padding: 50px !important;
+}
+</style>

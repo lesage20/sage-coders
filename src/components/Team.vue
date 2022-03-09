@@ -3,9 +3,9 @@
     <v-col lg="4" md="4" cols="12" v-for="member in members" :key="member.nickName">
 
         <v-card flat class="text-center">
-            <v-img max-height="150" contain :src="require('../assets/profile.svg')" />
+            <v-img max-height="150" contain :src="require('../assets/profile.svg')" alt="illustration de profile d'equipe"/>
 
-            <h3 class="text-center grey--text">
+            <h3 class="text-center grey--text darken-4">
                 {{member.firstName }} {{member.lastName}}
             </h3>
             <v-card-subtitle>
